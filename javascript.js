@@ -1,54 +1,243 @@
+let comp = 0;
+let player = 0;
+let para = document.querySelector('.par');
+let ROCK = document.querySelector('.Rock');
+ROCK.addEventListener('click',function(){let game1='rock';
 
-
-let win = 0;
-for(let i = 1;i<=5;i++)
-{
-    let game2= prompt("enter rock paper or sissor");
-let game1 = game2.toLowerCase();
 let hand = ['rock','paper','sissor'];
 let game = hand[Math.floor(Math.random()*hand.length)];
 
 
 if (game1 === game)
 {
-    console.log("Draw");
+    let text = document.createTextNode("Draw");
+    para.appendChild(text);
 }
 else if(game1 == 'rock'){
     if(game == 'paper')
     {
-        console.log("i win paper wins rock ");
-        win++;
+        let text = document.createTextNode("i win paper wins rock ");
+    para.appendChild(text);
+        
+        comp++;
+        
 
     }
     else
     {
-        console.log("You win rock beats sissor");
+        let text = document.createTextNode("You win rock beats sissor");
+    para.appendChild(text);
+        
+        player++;
     }
     }
 else if(game1 == 'paper'){
     if(game == 'sissor')    
     {
-        console.log("i win sissor wins paper");
-        win++;
+        let text = document.createTextNode("i win sissor wins paper");
+    para.appendChild(text);
+        
+        comp++;
+        
     }
     else
     {
-        console.log("u win paper beats rock");
+        let text = document.createTextNode("u win paper beats rock");
+    para.appendChild(text);
+        
+        player++;
     }
     }
 else{
     if(game == 'rock') 
     {
-        console.log("i win rock wins sissor");
-        win++;
+        let text = document.createTextNode("i win rock wins sissor");
+    para.appendChild(text);
+        
+        comp++;
+        
     }
     else    
     {
-        console.log("u win sissor win paper");
+        let text = document.createTextNode("u win sissor win paper");
+    para.appendChild(text);
+        
+        player++;
     }
+
+    }
+    if(player==5)
+    {
+        alert("you win");
+    }
+    if(comp == 5)
+    {
+        alert("you lose");
 
     }
    
-}
 
-console.log("i win" + win + "times");
+
+
+});
+
+let PAPER = document.querySelector('.Paper');
+PAPER.addEventListener('click',function(){let game1='paper';
+
+let hand = ['rock','paper','sissor'];
+let game = hand[Math.floor(Math.random()*hand.length)];
+
+
+if (game1 === game)
+{
+    let text = document.createTextNode("Draw");
+    para.appendChild(text);
+}
+else if(game1 == 'rock'){
+    if(game == 'paper')
+    {
+        let text = document.createTextNode("i win paper wins rock ");
+    para.appendChild(text);
+        
+        comp++;
+        
+
+    }
+    else
+    {
+        let text = document.createTextNode("You win rock beats sissor");
+    para.appendChild(text);
+        
+        player++;
+    }
+    }
+else if(game1 == 'paper'){
+    if(game == 'sissor')    
+    {
+        let text = document.createTextNode("i win sissor wins paper");
+    para.appendChild(text);
+        
+        comp++;
+        
+    }
+    else
+    {
+        let text = document.createTextNode("u win paper beats rock");
+    para.appendChild(text);
+        
+        player++;
+    }
+    }
+else{
+    if(game == 'rock') 
+    {
+        let text = document.createTextNode("i win rock wins sissor");
+    para.appendChild(text);
+        
+        comp++;
+        
+    }
+    else    
+    {
+        let text = document.createTextNode("u win sissor win paper");
+    para.appendChild(text);
+        
+        player++;
+    }
+
+    }
+    if(player==5)
+    {
+        alert("you win");
+    }
+    if(comp == 5)
+    {
+        alert("you lose");
+
+    }
+   
+
+
+
+});
+
+let SISSOR = document.querySelector('.Sissor');
+SISSOR.addEventListener('click',function(){let game1='sissor';
+
+let hand = ['rock','paper','sissor'];
+let game = hand[Math.floor(Math.random()*hand.length)];
+
+
+if (game1 === game)
+{
+    let text = document.createTextNode("Draw");
+    para.appendChild(text);
+}
+else if(game1 == 'rock'){
+    if(game == 'paper')
+    {
+        let text = document.createTextNode("i win paper wins rock ");
+    para.appendChild(text);
+        
+        comp++;
+        
+
+    }
+    else
+    {
+        let text = document.createTextNode("You win rock beats sissor");
+    para.appendChild(text);
+        
+        player++;
+    }
+    }
+else if(game1 == 'paper'){
+    if(game == 'sissor')    
+    {
+        let text = document.createTextNode("i win sissor wins paper");
+    para.appendChild(text);
+        
+        comp++;
+        
+    }
+    else
+    {
+        let text = document.createTextNode("u win paper beats rock");
+    para.appendChild(text);
+        
+        player++;
+    }
+    }
+else{
+    if(game == 'rock') 
+    {
+        let text = document.createTextNode("i win rock wins sissor");
+    para.appendChild(text);
+        
+        comp++;
+        
+    }
+    else    
+    {
+        let text = document.createTextNode("u win sissor win paper");
+    para.appendChild(text);
+        
+        player++;
+    }
+
+    }
+    if(player==5)
+    {
+        alert("you win");
+    }
+    if(comp == 5)
+    {
+        alert("you lose");
+
+    }
+   
+
+
+
+});
+
